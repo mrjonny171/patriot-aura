@@ -123,7 +123,7 @@ export default function Home() {
 
             {/* Social Links */}
             <div className="flex justify-center mb-16">
-              <a href="#" className="bg-white/10 hover:bg-white/20 p-4 rounded-full transition-all duration-300 hover:scale-110 group">
+              <a href="https://x.com/PatriotAura" target="_blank" rel="noopener noreferrer" className="bg-white/10 hover:bg-white/20 p-4 rounded-full transition-all duration-300 hover:scale-110 group">
                 <svg className="w-8 h-8 group-hover:text-blue-400 transition-colors duration-300" fill="currentColor" viewBox="0 0 24 24">
                   <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
                 </svg>
@@ -272,7 +272,7 @@ export default function Home() {
               Ready to Join the EAGLE Army?
             </h2>
             <p className="text-xl text-blue-100 mb-8 max-w-2xl mx-auto">
-              Don't miss out on the next big memecoin revolution. Get your EAGLE 
+              Don&apos;t miss out on the next big memecoin revolution. Get your EAGLE 
               tokens now and soar to the moon with us!
             </p>
             
@@ -286,7 +286,9 @@ export default function Home() {
               
               <div className="flex justify-center">
                 <a 
-                  href="#" 
+                  href="https://x.com/PatriotAura" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
                   className="bg-white/20 hover:bg-white/30 p-4 rounded-full transition-all duration-300 hover:scale-110"
                   title="X (Twitter)"
                 >
