@@ -1,36 +1,85 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 🦅 Patriot Aura - Memecoin Landing Page
 
-## Getting Started
+**The Eagle Has Landed** 🇺🇸
 
-First, run the development server:
+A patriotic memecoin landing page built with Next.js and Tailwind CSS, featuring animated starfield backgrounds and patriotic styling.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+## 🚀 Quick Start
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+1. **Add your eagle image:**
+   - Save your eagle image as `public/patriot-eagle.jpg`
+   - Make sure it's a high-quality image (recommended: 512x512px or larger)
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+2. **Install dependencies:**
+   ```bash
+   npm install
+   ```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+3. **Run the development server:**
+   ```bash
+   npm run dev
+   ```
 
-## Learn More
+4. **Open your browser:**
+   Navigate to [http://localhost:3000](http://localhost:3000)
 
-To learn more about Next.js, take a look at the following resources:
+## 🎨 Features
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+- **Animated Starfield Background** - Three layers of moving stars
+- **Patriotic Color Scheme** - Red, white, and blue gradient themes
+- **Responsive Design** - Mobile-first approach
+- **Social Media Icons** - Twitter, Discord, Telegram ready
+- **Tokenomics Display** - Clean stats presentation
+- **Hover Effects** - Interactive buttons and elements
+- **SEO Optimized** - Meta tags and Open Graph ready
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## 🛠️ Customization
 
-## Deploy on Vercel
+### Update Token Information
+Edit `src/app/page.tsx` to customize:
+- Token name and symbol
+- Total supply
+- Social media links
+- Buy/Chart button URLs
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+### Modify Colors
+The patriotic theme uses:
+- **Red**: `#dc2626` (red-600)
+- **Blue**: `#1d4ed8` (blue-600)  
+- **White**: `#ffffff`
+- **Gold**: `#fbbf24` (yellow-400)
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+### Add Your Links
+Update the button URLs in the CTA section:
+- Buy button: Add your DEX link
+- Chart button: Add your DexTools/DexScreener link
+- Social icons: Add your social media URLs
+
+## 📱 Mobile Responsive
+
+The landing page is fully responsive and optimized for:
+- Desktop (1200px+)
+- Tablet (768px - 1199px)
+- Mobile (320px - 767px)
+
+## 🔧 Technologies Used
+
+- **Next.js 15** - React framework
+- **Tailwind CSS 4** - Styling
+- **TypeScript** - Type safety
+- **Custom CSS** - Animations and effects
+
+## 🎯 Performance
+
+- Optimized images with Next.js Image component
+- CSS animations for smooth performance
+- Minimal JavaScript bundle
+- Fast loading times
+
+## 📝 License
+
+This project is open source and available under the MIT License.
+
+---
+
+**Remember:** This is for educational purposes. Always DYOR (Do Your Own Research) before investing in any cryptocurrency or memecoin. 🚀🦅🇺🇸
