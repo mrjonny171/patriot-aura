@@ -121,12 +121,21 @@ export default function Home() {
               </div>
             </div>
 
-            {/* Social Links */}
-            <div className="flex justify-center mb-16">
+            {/* Social Links & Community */}
+            <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-16">
               <a href="https://x.com/PatriotAura" target="_blank" rel="noopener noreferrer" className="bg-white/10 hover:bg-white/20 p-4 rounded-full transition-all duration-300 hover:scale-110 group">
                 <svg className="w-8 h-8 group-hover:text-blue-400 transition-colors duration-300" fill="currentColor" viewBox="0 0 24 24">
                   <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
                 </svg>
+              </a>
+              
+              <a 
+                href="https://x.com/i/communities/1941182209915818078/" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="bg-gradient-to-r from-red-500 to-red-600 hover:from-red-600 hover:to-red-700 text-white font-bold py-3 px-6 rounded-full text-lg shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105 flex items-center gap-2"
+              >
+                🇺🇸 Join Community
               </a>
             </div>
           </div>
