@@ -7,7 +7,7 @@ import { useState } from "react";
 export default function Home() {
   const [copied, setCopied] = useState(false);
   const [isEasterEgg, setIsEasterEgg] = useState(false);
-  const contractAddress = ""
+  const contractAddress = "GkXyCwnBPiTmC2ZZTf326KgXo4fEVNPcPg5kQwmjpump"
   
   const copyToClipboard = async () => {
     try {
