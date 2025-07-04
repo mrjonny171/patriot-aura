@@ -177,22 +177,7 @@ export default function Home() {
                 </div>
               </div>
 
-              {/* Image 3 - Eagle */}
-              <div className="relative group overflow-hidden rounded-xl bg-white/10 backdrop-blur-sm border border-white/20 hover:border-white/40 transition-all duration-300">
-                <div className="aspect-square relative">
-                  <Image
-                    src="/patriot-eagle.png"
-                    alt="Patriot Eagle - Symbol of Freedom"
-                    fill
-                    className="object-cover group-hover:scale-105 transition-transform duration-500"
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-                  <div className="absolute bottom-4 left-4 right-4 text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                    <h3 className="font-bold text-lg mb-1">Freedom's Guardian</h3>
-                    <p className="text-sm text-gray-200">The eagle soars with liberty's flame</p>
-                  </div>
-                </div>
-              </div>
+              
 
               {/* Image 4 - Ronald */}
               <div className="relative group overflow-hidden rounded-xl bg-white/10 backdrop-blur-sm border border-white/20 hover:border-white/40 transition-all duration-300">
@@ -207,6 +192,23 @@ export default function Home() {
                   <div className="absolute bottom-4 left-4 right-4 text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                     <h3 className="font-bold text-lg mb-1">American Spirit</h3>
                     <p className="text-sm text-gray-200">Blazing trails of freedom</p>
+                  </div>
+                </div>
+              </div>
+
+              {/* Image 5 - USA Man */}
+              <div className="relative group overflow-hidden rounded-xl bg-white/10 backdrop-blur-sm border border-white/20 hover:border-white/40 transition-all duration-300">
+                <div className="aspect-square relative">
+                  <Image
+                    src="/usa_man.png"
+                    alt="American Patriot - True Freedom Fighter"
+                    fill
+                    className="object-cover group-hover:scale-105 transition-transform duration-500"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                  <div className="absolute bottom-4 left-4 right-4 text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                    <h3 className="font-bold text-lg mb-1">True Patriot</h3>
+                    <p className="text-sm text-gray-200">Defending liberty with style</p>
                   </div>
                 </div>
               </div>
