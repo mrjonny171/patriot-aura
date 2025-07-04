@@ -74,6 +74,14 @@ export default function Home() {
           <div className="text-center max-w-4xl mx-auto">
             {/* Eagle Image */}
             <div className="mb-8 relative">
+              {/* Click hint arrow */}
+              <div className="absolute -top-16 left-1/2 transform -translate-x-1/2 flex flex-col items-center animate-bounce z-10">
+                <span className="text-yellow-300 text-sm font-bold mb-2 animate-pulse">Click me! 🎯</span>
+                <svg className="w-6 h-6 text-yellow-400" fill="currentColor" viewBox="0 0 20 20">
+                  <path fillRule="evenodd" d="M14.707 10.293a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 111.414-1.414L9 12.586V5a1 1 0 112 0v7.586l2.293-2.293a1 1 0 011.414 0z" clipRule="evenodd" />
+                </svg>
+              </div>
+              
               <div 
                 className="w-64 h-64 md:w-80 md:h-80 mx-auto relative cursor-pointer hover:scale-105 transition-transform duration-300"
                 onClick={triggerEasterEgg}
