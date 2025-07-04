@@ -3,8 +3,10 @@
 import Image from "next/image";
 import { useState } from "react";
 
+
 export default function Home() {
   const [copied, setCopied] = useState(false);
+  const [isEasterEgg, setIsEasterEgg] = useState(false);
   const contractAddress = "incoming"
   
   const copyToClipboard = async () => {
@@ -15,6 +17,23 @@ export default function Home() {
     } catch (err) {
       console.error('Failed to copy: ', err);
     }
+  };
+
+  const triggerEasterEgg = () => {
+    setIsEasterEgg(true);
+    
+    // Play the MAGA sound effect
+    try {
+      const audio = new Audio('/Voicy_Make America Great Again.mp3');
+      audio.volume = 0.7; // Set volume to 70%
+      audio.play().catch(err => {
+        console.log('Audio play failed:', err);
+      });
+    } catch (err) {
+      console.log('Audio creation failed:', err);
+    }
+    
+    setTimeout(() => setIsEasterEgg(false), 3000);
   };
 
   return (
@@ -44,7 +63,7 @@ export default function Home() {
           </div>
           <button 
             onClick={copyToClipboard}
-            className="bg-gradient-to-r from-blue-500 to-blue-600 hover:from-blue-600 hover:to-blue-700 text-white font-bold py-2 px-4 rounded-full text-sm shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105"
+            className="bg-gradient-to-r from-blue-500 to-blue-600 hover:from-blue-600 hover:to-blue-700 text-white font-bold py-2 px-4 rounded-full text-sm shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105 cursor-pointer"
           >
             🦅 {copied ? 'COPIED!' : 'FLY NOW'}
           </button>
@@ -55,7 +74,10 @@ export default function Home() {
           <div className="text-center max-w-4xl mx-auto">
             {/* Eagle Image */}
             <div className="mb-8 relative">
-              <div className="w-64 h-64 md:w-80 md:h-80 mx-auto relative">
+              <div 
+                className="w-64 h-64 md:w-80 md:h-80 mx-auto relative cursor-pointer hover:scale-105 transition-transform duration-300"
+                onClick={triggerEasterEgg}
+              >
                 {/* Circular Frame */}
                 <div className="absolute inset-0 rounded-full bg-gradient-to-br from-yellow-400 via-orange-500 to-red-600 p-2 shadow-2xl">
                   <div className="w-full h-full rounded-full bg-gradient-to-br from-slate-900 via-blue-900 to-red-900 p-4 overflow-hidden">
@@ -70,7 +92,18 @@ export default function Home() {
                 </div>
                 {/* Glow Effect */}
                 <div className="absolute inset-0 bg-gradient-to-r from-yellow-400/20 to-orange-400/20 rounded-full blur-3xl animate-pulse"></div>
+                
+                {/* Muzzle Flash Effect */}
+                {isEasterEgg && (
+                  <div className="absolute inset-0 pointer-events-none">
+                    <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-8 h-8 bg-yellow-400 rounded-full animate-ping"></div>
+                    <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-6 h-6 bg-orange-500 rounded-full animate-ping" style={{ animationDelay: '0.1s' }}></div>
+                    <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-4 h-4 bg-red-500 rounded-full animate-ping" style={{ animationDelay: '0.2s' }}></div>
+                  </div>
+                )}
               </div>
+              
+
             </div>
 
             {/* Main Title */}
@@ -93,7 +126,7 @@ export default function Home() {
               {/* FLY NOW Button */}
               <button 
                 onClick={copyToClipboard}
-                className="bg-gradient-to-r from-blue-500 to-blue-600 hover:from-blue-600 hover:to-blue-700 text-white font-bold py-3 px-6 rounded-full text-lg shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105 flex items-center gap-2"
+                className="bg-gradient-to-r from-blue-500 to-blue-600 hover:from-blue-600 hover:to-blue-700 text-white font-bold py-3 px-6 rounded-full text-lg shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105 flex items-center gap-2 cursor-pointer"
               >
                 🦅 {copied ? 'COPIED!' : 'FLY NOW'}
               </button>
@@ -104,7 +137,7 @@ export default function Home() {
                 <span className="text-gray-900 font-mono text-sm truncate flex-1">{contractAddress}</span>
                 <button 
                   onClick={copyToClipboard}
-                  className="ml-3 p-1 hover:bg-gray-100 rounded transition-colors duration-200 flex-shrink-0"
+                  className="ml-3 p-1 hover:bg-gray-100 rounded transition-colors duration-200 flex-shrink-0 cursor-pointer"
                   title="Copy contract address"
                 >
                   {copied ? (
@@ -123,7 +156,7 @@ export default function Home() {
 
             {/* Social Links & Community */}
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-16">
-              <a href="https://x.com/PatriotAura" target="_blank" rel="noopener noreferrer" className="bg-white/10 hover:bg-white/20 p-4 rounded-full transition-all duration-300 hover:scale-110 group">
+              <a href="https://x.com/PatriotAura" target="_blank" rel="noopener noreferrer" className="bg-white/10 hover:bg-white/20 p-4 rounded-full transition-all duration-300 hover:scale-110 group cursor-pointer">
                 <svg className="w-8 h-8 group-hover:text-blue-400 transition-colors duration-300" fill="currentColor" viewBox="0 0 24 24">
                   <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
                 </svg>
@@ -133,7 +166,7 @@ export default function Home() {
                 href="https://x.com/i/communities/1941182209915818078/" 
                 target="_blank" 
                 rel="noopener noreferrer"
-                className="bg-gradient-to-r from-red-500 to-red-600 hover:from-red-600 hover:to-red-700 text-white font-bold py-3 px-6 rounded-full text-lg shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105 flex items-center gap-2"
+                className="bg-gradient-to-r from-red-500 to-red-600 hover:from-red-600 hover:to-red-700 text-white font-bold py-3 px-6 rounded-full text-lg shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105 flex items-center gap-2 cursor-pointer"
               >
                 🇺🇸 Join Community
               </a>
@@ -245,11 +278,11 @@ export default function Home() {
                 </div>
                 <div className="bg-white/20 backdrop-blur-sm rounded-xl p-6 flex justify-between items-center">
                   <span className="text-white font-semibold text-lg">Liquidity</span>
-                  <span className="text-white font-bold text-xl">167,813.26</span>
+                  <span className="text-white font-bold text-xl">Updated Daily</span>
                 </div>
                 <div className="bg-white/20 backdrop-blur-sm rounded-xl p-6 flex justify-between items-center">
                   <span className="text-white font-semibold text-lg">Market Cap</span>
-                  <span className="text-white font-bold text-xl">1,636,193.00</span>
+                  <span className="text-white font-bold text-xl">Updated Daily</span>
                 </div>
               </div>
               
@@ -288,7 +321,7 @@ export default function Home() {
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
               <button 
                 onClick={copyToClipboard}
-                className="bg-white text-blue-600 hover:bg-blue-50 font-bold py-4 px-8 rounded-full text-lg shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105 flex items-center gap-2"
+                className="bg-white text-blue-600 hover:bg-blue-50 font-bold py-4 px-8 rounded-full text-lg shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105 flex items-center gap-2 cursor-pointer"
               >
                 🦅 {copied ? 'COPIED!' : 'FLY NOW'}
               </button>
@@ -298,7 +331,7 @@ export default function Home() {
                   href="https://x.com/PatriotAura" 
                   target="_blank" 
                   rel="noopener noreferrer"
-                  className="bg-white/20 hover:bg-white/30 p-4 rounded-full transition-all duration-300 hover:scale-110"
+                  className="bg-white/20 hover:bg-white/30 p-4 rounded-full transition-all duration-300 hover:scale-110 cursor-pointer"
                   title="X (Twitter)"
                 >
                   <svg className="w-6 h-6 text-white" fill="currentColor" viewBox="0 0 24 24">

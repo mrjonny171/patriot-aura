@@ -144,3 +144,40 @@ body {
   -webkit-text-fill-color: transparent;
   background-clip: text;
 }
+
+/* Easter Egg Bullet Animations */
+@keyframes bullet-1 {
+  0% { transform: translateX(0) translateY(-50%) rotate(0deg); opacity: 1; }
+  100% { transform: translateX(800px) translateY(-50%) rotate(15deg); opacity: 0; }
+}
+
+@keyframes bullet-2 {
+  0% { transform: translateX(0) translateY(-50%) rotate(0deg); opacity: 1; }
+  100% { transform: translateX(-800px) translateY(-50%) rotate(-15deg); opacity: 0; }
+}
+
+@keyframes bullet-3 {
+  0% { transform: translateX(0) translateY(-50%) rotate(0deg); opacity: 1; }
+  100% { transform: translateX(600px) translateY(-200px) rotate(30deg); opacity: 0; }
+}
+
+@keyframes bullet-4 {
+  0% { transform: translateX(0) translateY(-50%) rotate(0deg); opacity: 1; }
+  100% { transform: translateX(-600px) translateY(-200px) rotate(-30deg); opacity: 0; }
+}
+
+.animate-bullet-1 {
+  animation: bullet-1 0.8s ease-out forwards;
+}
+
+.animate-bullet-2 {
+  animation: bullet-2 0.8s ease-out forwards;
+}
+
+.animate-bullet-3 {
+  animation: bullet-3 1s ease-out forwards;
+}
+
+.animate-bullet-4 {
+  animation: bullet-4 1s ease-out forwards;
+}
