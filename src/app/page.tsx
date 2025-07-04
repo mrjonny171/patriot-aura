@@ -7,7 +7,7 @@ import { useState } from "react";
 export default function Home() {
   const [copied, setCopied] = useState(false);
   const [isEasterEgg, setIsEasterEgg] = useState(false);
-  const contractAddress = "incoming"
+  const contractAddress = ""
   
   const copyToClipboard = async () => {
     try {
@@ -118,7 +118,7 @@ export default function Home() {
             
             {/* Description */}
             <p className="text-lg md:text-xl mb-8 text-gray-300 max-w-2xl mx-auto">
-              Freedom, Honor, and Gains. The most patriotic memecoin soaring to new heights.
+              Freedom, Honor, and Gains. The most patriotic meme soaring to new heights.
             </p>
 
             {/* APE NOW and Contract Address */}
